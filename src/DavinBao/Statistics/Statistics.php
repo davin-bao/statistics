@@ -50,29 +50,9 @@ class Statistics
    * @deprecated
    * @return Illuminate\View\View
    */
-  public function makeFlowForm($flow = null, $roles = null)
+  public function makeResultTable($statistic = null)
   {
-    //var_dump($this->_app['config']);exit;
-    return $this->_app['view']->make( 'workflow::flow_form', compact( 'flow', 'roles') );
+    return $this->_app['view']->make( 'statistics::result_table', compact( 'statistic') );
   }
 
-  public function makeFlowGraph($flow = null, $orderID = 0)
-  {
-    return $this->_app['view']->make( 'workflow::flow_graph', compact( 'flow', 'orderID') );
-  }
-
-  public function makeBindingFlowForm($flows = array(), $entry = null)
-  {
-    return $this->_app['view']->make( 'workflow::binding_form', compact( 'flows', 'entry') );
-  }
-
-  public function makeAuditFlowForm($entry = null, $nextAuditUsers = array(), $currentNode = null)
-  {
-    return $this->_app['view']->make( 'workflow::audit_form', compact( 'entry', 'nextAuditUsers','currentNode') );
-  }
-
-  public function makeAuditDetail($entry)
-  {
-    return $this->_app['view']->make( 'workflow::audit_detail', compact('entry') );
-  }
 }

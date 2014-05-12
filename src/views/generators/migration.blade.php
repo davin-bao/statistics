@@ -17,6 +17,7 @@ class StatisticsSetupTables extends Migration {
         {
             $table->increments('id')->unsigned();
             $table->string('name')->unique();
+            $table->string('column_names');
             $table->enum('type', array({{ $statistics_type }}));
             $table->text('sql');
             $table->timestamps();
