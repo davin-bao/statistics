@@ -1,0 +1,29 @@
+{
+    "name": "davin-bao/statistics",
+    "description": "this is a statistics package for laravel",
+  "keywords": ["laravel","statistics"],
+  "homepage": "https://github.com/davin-bao/statistics",
+  "license": "MIT",
+    "authors": [
+        {
+          "name": "davin-bao",
+          "email": "davin.bao@gmail.com",
+          "homepage": "http://davinbao.blog.com/",
+          "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
+        "laravelbook/ardent": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "DavinBao\\Statistics\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
