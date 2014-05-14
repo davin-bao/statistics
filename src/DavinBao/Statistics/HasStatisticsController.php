@@ -15,6 +15,7 @@ trait HasStatisticsController
     $title = $statistic->name;
     return \View::make(\Config::get('app.admin_template').'/statistics/result', compact('title','statistic'));
   }
+
   public function getExport($statistic){
     $title = $statistic->name;
     $type = \Input::get('type');

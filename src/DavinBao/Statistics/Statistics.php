@@ -54,5 +54,15 @@ class Statistics
   {
     return $this->_app['view']->make( 'statistics::result_table', compact( 'statistic') );
   }
+  /**
+   * Display the default create flow view
+   *
+   * @deprecated
+   * @return Illuminate\View\View
+   */
+  public function makeEditForm($entry = null)
+  {
+    return $this->_app['view']->make( 'statistics::create_edit_form', compact( 'entry') );
+  }
 
 }

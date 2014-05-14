@@ -8,12 +8,11 @@
 
 return array(
     'statistics' => '统计',
+    'general' => '基本信息',
 
     'name' => '名称',
     'column_names' => '结果集列标题',
-    'type' => '类型',
-
-
+    'category_id' => '目录ID',
 
     'name' => '名称',
     'follower' => '参与者',

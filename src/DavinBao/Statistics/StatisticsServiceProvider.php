@@ -61,31 +61,25 @@ class StatisticsServiceProvider extends ServiceProvider {
   public function registerCommands()
   {
 
-    $this->app['command.workflow.migration'] = $this->app->share(function($app)
+    $this->app['command.statistics.migration'] = $this->app->share(function($app)
     {
       return new MigrationCommand($app);
     });
 
-//    $this->app['command.workflow.routes'] = $this->app->share(function($app)
-//    {
-//      return new RoutesCommand($app);
-//    });
-//
-//    $this->app['command.workflow.models'] = $this->app->share(function($app)
-//    {
-//      return new ModelsCommand($app);
-//    });
-//
-//    $this->app['command.workflow.controllers'] = $this->app->share(function($app)
-//    {
-//      return new ControllersCommand($app);
-//    });
+    $this->app['command.statistics.routes'] = $this->app->share(function($app)
+    {
+      return new RoutesCommand($app);
+    });
+
+    $this->app['command.statistics.views'] = $this->app->share(function($app)
+    {
+      return new ViewsCommand($app);
+    });
 
     $this->commands(
-      'command.workflow.migration'
-//      'command.workflow.routes',
-//      'command.workflow.models',
-//      'command.workflow.controllers'
+      'command.statistics.migration',
+      'command.statistics.views',
+      'command.statistics.routes'
     );
   }
 }
